@@ -1,0 +1,53 @@
+import React, {FC} from 'react';
+
+interface ShareFilterProp {
+    onMouseEnter: () => void,
+    onMouseLeave: () => void,
+    hover: boolean
+}
+
+const ShareFilter: FC<ShareFilterProp> = ({onMouseEnter, onMouseLeave, hover}) => {
+
+    return (
+        <>
+            {hover ?
+                <svg onMouseLeave={onMouseLeave} onMouseEnter={onMouseEnter} width="29" height="16" viewBox="0 0 29 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_i_8_257)">
+                        <rect width="28.5" height="16" rx="8" fill="#121212"/>
+                        <path
+                            d="M15.1 8.00001C15.1 6.66793 14.1153 5.32825 12.9143 5.32825C12.772 5.32825 12.3031 5.32825 12.1857 5.32825C10.9786 5.32825 10 6.52445 10 8.00001C10 9.27153 10.7266 10.3356 11.7 10.6056C11.8562 10.649 12.0188 10.6718 12.1857 10.6718"
+                            stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path
+                            d="M13.4 8.00002C13.4 9.33211 14.3847 10.6718 15.5857 10.6718C15.7279 10.6718 16.1969 10.6718 16.3142 10.6718C17.5214 10.6718 18.5 9.4756 18.5 8.00002C18.5 6.7285 17.7733 5.66444 16.8 5.39445C16.6437 5.35112 16.4812 5.32825 16.3142 5.32825"
+                            stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                        <filter id="filter0_i_8_257" x="0" y="0" width="32.5" height="20" filterUnits="userSpaceOnUse"
+                                color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                           result="hardAlpha"/>
+                            <feOffset dx="4" dy="4"/>
+                            <feGaussianBlur stdDeviation="2"/>
+                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_8_257"/>
+                        </filter>
+                    </defs>
+                </svg>
+                : <svg onMouseLeave={onMouseLeave} onMouseEnter={onMouseEnter} width="29" height="16" viewBox="0 0 29 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="28.5" height="16" rx="8" fill="#9BCAF5"/>
+                    <path
+                        d="M15.1 8.00001C15.1 6.66793 14.1153 5.32825 12.9143 5.32825C12.772 5.32825 12.3031 5.32825 12.1857 5.32825C10.9786 5.32825 10 6.52445 10 8.00001C10 9.27153 10.7266 10.3356 11.7 10.6056C11.8562 10.649 12.0188 10.6718 12.1857 10.6718"
+                        stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path
+                        d="M13.4 8.00002C13.4 9.33211 14.3847 10.6718 15.5857 10.6718C15.7279 10.6718 16.1969 10.6718 16.3142 10.6718C17.5214 10.6718 18.5 9.4756 18.5 8.00002C18.5 6.7285 17.7733 5.66444 16.8 5.39445C16.6437 5.35112 16.4812 5.32825 16.3142 5.32825"
+                        stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            }
+        </>
+    );
+};
+
+export default ShareFilter;

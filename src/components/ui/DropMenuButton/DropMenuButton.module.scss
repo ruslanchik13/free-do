@@ -1,0 +1,21 @@
+.btn {
+    z-index: 5;
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    right: -139px;
+    box-shadow: 8px 8px 24px 0 rgba(0, 0, 0, 0.08);
+    padding: 10px 13px;
+    border-radius: 28px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+
+
+
+    &:hover {
+        box-shadow: 8px 8px 4px 0 #00000026 inset;
+        cursor: pointer;
+    }
+}
